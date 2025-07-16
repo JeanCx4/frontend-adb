@@ -18,7 +18,6 @@ const Navbar = () => {
         <Link className="nav-link" to="/estudiantes">Estudiantes</Link>
         <Link className="nav-link" to="/asistencias">Asistencia</Link> {/* ✅ ruta corregida */}
         <Link className="nav-link" to="/registro-qr">📱 Escáner QR</Link>
-        <Link className="nav-link" to="/generar-qr-prueba">🧪 QR Prueba</Link>
         <Link className="nav-link" to="/facultades">Facultades</Link>
         <Link className="nav-link" to="/carreras">Carreras</Link>
         <Link className="nav-link" to="/clubes">Clubes</Link>

@@ -17,9 +17,6 @@ import GestionAsistencias from './pages/GestionAsistencias';
 // 📱 Asistencias QR
 import RegistroAsistenciaQR from './pages/RegistroAsistenciaQR';
 
-// 🧪 Componente de prueba
-import GeneradorQRPrueba from './components/GeneradorQRPrueba';
-
 // 🏛️ Datos institucionales
 import Facultades from './pages/Facultades';
 import Carreras from './pages/Carreras';
@@ -68,12 +65,6 @@ const AppWithNavbar = () => {
         <Route
           path="/registro-qr"
           element={<ProtectedRoute><RegistroAsistenciaQR /></ProtectedRoute>}
-        />
-
-        {/* 🧪 Generador de QR de prueba */}
-        <Route
-          path="/generar-qr-prueba"
-          element={<ProtectedRoute><GeneradorQRPrueba /></ProtectedRoute>}
         />
 
         {/* 🏛️ Datos institucionales */}

@@ -60,13 +60,28 @@ const GestionAsistencias = () => {
     }
 
     try {
-      await api.post('/asistencias', { DNI_ESTUDIANTE: dniInput.trim() });
-      setMensaje('✅ Asistencia registrada.');
+      const response = await api.post('/asistencias', { DNI_ESTUDIANTE: dniInput.trim() });
+      
+      // Verificar si la respuesta contiene mensaje personalizado
+      if (response.data.mensaje) {
+        setMensaje(`✅ ${response.data.mensaje}`);
+      } else {
+        setMensaje('✅ Asistencia registrada.');
+      }
+      
       setDniInput('');
       cargarAsistencias();
     } catch (err) {
       console.error('💥 Error registrando asistencia:', err);
-      setMensaje('❌ Error al registrar asistencia.');
+      
+      // Manejar errores específicos del backend
+      if (err.response?.status === 400) {
+        setMensaje(`❌ ${err.response.data.error}`);
+      } else if (err.response?.status === 404) {
+        setMensaje('❌ Estudiante no encontrado.');
+      } else {
+        setMensaje('❌ Error al registrar asistencia.');
+      }
     }
   };
 

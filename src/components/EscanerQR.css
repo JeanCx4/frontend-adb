@@ -152,7 +152,7 @@
 }
 
 .escaner-controls .btn {
-  min-width: 180px;
+  min-width: 120px;
   font-weight: 600;
   border-radius: 25px;
   padding: 0.8rem 1.5rem;
@@ -186,6 +186,87 @@
   margin-bottom: 0.3rem;
   color: #6c757d;
   font-size: 0.9rem;
+}
+
+/* Estilos adicionales para el escáner simple */
+.scanning-frame-simple {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  margin: 20px auto;
+}
+
+.corner {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 4px solid #28a745;
+}
+
+.corner-tl {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+  animation: corner-glow 2s infinite;
+}
+
+.corner-tr {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+  animation: corner-glow 2s infinite 0.5s;
+}
+
+.corner-bl {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+  animation: corner-glow 2s infinite 1s;
+}
+
+.corner-br {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
+  animation: corner-glow 2s infinite 1.5s;
+}
+
+@keyframes corner-glow {
+  0%, 100% { 
+    opacity: 1; 
+    box-shadow: 0 0 5px #28a745;
+  }
+  50% { 
+    opacity: 0.5; 
+    box-shadow: 0 0 15px #28a745;
+  }
+}
+
+.escaner-info {
+  margin-top: 1rem;
+}
+
+.escaner-info ul {
+  margin-bottom: 0;
+  padding-left: 1.2rem;
+}
+
+.escaner-info li {
+  margin-bottom: 0.3rem;
+  font-size: 0.9rem;
+}
+
+/* Estilos adicionales para el escáner funcional */
+.scanning-methods {
+  color: white;
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+  opacity: 0.8;
 }
 
 /* Responsive */

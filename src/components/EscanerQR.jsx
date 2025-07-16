@@ -211,9 +211,6 @@ const EscanerQR = ({ onQRDetected, onClose }) => {
                 facingMode: "environment", // Preferir cámara trasera en móviles
                 frameRate: { ideal: 15, max: 30 } // Limitar frame rate para mejor rendimiento
               }}
-              style={{
-                transform: 'scaleX(-1)' // Espejo para mejor UX
-              }}
             />
             
             {scanning && (

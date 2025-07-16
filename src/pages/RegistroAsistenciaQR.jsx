@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import EscanerQR from '../components/EscanerQR';
+import EscanerQRFuncional from '../components/EscanerQRFuncional';
 
 const RegistroAsistenciaQR = () => {
   const [mostrarEscaner, setMostrarEscaner] = useState(false);
@@ -296,7 +296,7 @@ const RegistroAsistenciaQR = () => {
 
       {/* Modal Escáner QR */}
       {mostrarEscaner && (
-        <EscanerQR
+        <EscanerQRFuncional
           onQRDetected={handleQRDetected}
           onClose={() => setMostrarEscaner(false)}
         />
