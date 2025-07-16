@@ -21,6 +21,7 @@ const Navbar = () => {
         <Link className="nav-link" to="/facultades">Facultades</Link>
         <Link className="nav-link" to="/carreras">Carreras</Link>
         <Link className="nav-link" to="/clubes">Clubes</Link>
+        <Link className="nav-link" to="/backups">🗄️ Backups</Link>
       </div>
       <button className="btn btn-outline-light ms-auto" onClick={cerrarSesion}>
         Cerrar sesión

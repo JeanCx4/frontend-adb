@@ -22,6 +22,9 @@ import Facultades from './pages/Facultades';
 import Carreras from './pages/Carreras';
 import Clubes from './pages/Clubes';
 
+// 🗄️ Gestión de backups
+import GestionBackups from './pages/GestionBackups';
+
 const AppWithNavbar = () => {
   return (
     <>
@@ -79,6 +82,12 @@ const AppWithNavbar = () => {
         <Route
           path="/clubes"
           element={<ProtectedRoute><Clubes /></ProtectedRoute>}
+        />
+
+        {/* 🗄️ Gestión de backups */}
+        <Route
+          path="/backups"
+          element={<ProtectedRoute><GestionBackups /></ProtectedRoute>}
         />
       </Routes>
     </>
